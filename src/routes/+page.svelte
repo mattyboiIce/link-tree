@@ -13,15 +13,16 @@
     <div class="hero bg-base-200">
       <div class="hero-content text-center">
         <div class="w-full">
-          <h1 class="text-7xl font-bold">Social Link</h1>
-          <p class="py-6 text-2xl">One simple link to share your entire developer portfolio</p>
+          <h1 class="text-7xl font-bold">Social Link Sharing</h1>
+          <p class="py-6 text-2xl">One simple link to share your entire portfolio</p>
           {#if $userData?.username}
-            <a href="/{$userData.username}/edit" class="btn btn-primary">Edit Profile</a>
+            <a href="/{$userData.username}/edit" class="btn btn-primary">Edit Links</a>
+            <a href="/{$userData.username}" class="btn btn-secondary">View Links</a>
           {:else}
             <a href="/login" class="btn btn-primary">Get Started</a>
             <a href="/fireship" class="btn btn-secondary">Example Profile</a>
           {/if}
-          <p class="py-6">Learn how to build this app from scratch in the <a class="link" href="https://fireship.io/courses/sveltekit">Full SvelteKit Course</a></p>
+        
         </div>
       </div>
     </div>

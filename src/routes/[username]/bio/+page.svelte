@@ -1,20 +1,20 @@
 <script lang="ts">
     import type { PageData } from "./$types";
-    import { page } from '$app/stores';
+    import { page } from "$app/stores";
     import { enhance } from "$app/forms";
+  
+    interface Props {
+    data: PageData;
+  }
 
-  
-    export let data: PageData;
-  
+  let { data }: Props = $props();
   </script>
   
-
-<main class="max-w-lg prose text-center mx-auto my-6">
-  
+  <main class="max-w-lg prose text-center mx-auto my-6">
     <p>Current Bio: <span class="text-info">{data.bio}</span></p>
   
     <p>Status Code: {$page.status}</p>
-    <p class="text-error">{$page.form?.problem ?? ''}</p>
+    <p class="text-error">{$page.form?.problem ?? ""}</p>
   
     <form method="POST" use:enhance>
       <div class="form-control">
@@ -30,4 +30,3 @@
       <button class="btn btn-primary my-5">Update Bio</button>
     </form>
   </main>
-  

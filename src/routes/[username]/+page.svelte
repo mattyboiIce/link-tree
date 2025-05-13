@@ -22,10 +22,12 @@
       src={data.photoURL ?? "/user.png"}
       alt="photoURL"
       width="256"
-      class="mx-auto"
+      class="mx-auto m-4"
     />
   
+    <!--
     <p class="text-xl my-8">{data.bio ?? "no bio yet..."}</p>
+    -->
     <ul class="list-none">
       {#each data.links as item}
         <li>
